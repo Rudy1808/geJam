@@ -1,11 +1,9 @@
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 public enum EnemyType
 {
-    TestEnemy,
 }
-public class EnemyManager : MonoBehaviour
+public class PoolManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> prefabs;
     static Dictionary<EnemyType, Transform> enemyPoolDict = new Dictionary<EnemyType, Transform>();
