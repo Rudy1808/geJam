@@ -5,6 +5,7 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] private TowerUpgradeStats[] levels;
     int currentLevel = 0;
+    public float occupatedSpaceRadius = 2f;
 
     public TowerUpgradeStats CurrentData => levels[currentLevel];
 
