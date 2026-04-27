@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Cave : MonoBehaviour
 {
-    public int hp = 100;
+    public int hp;
+    public int money;
+    public int wave;
 
     void Start()
     {
@@ -18,12 +20,10 @@ public class Cave : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            // Try to get attack value from enemy component
             Enemy enemy = other.GetComponent<Enemy>();
             if (enemy != null)
             {
                 hp -= enemy.attack;
-                Debug.Log($"Cave took {enemy.attack} damage! HP: {hp}");
             }
         }
     }
