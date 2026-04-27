@@ -46,4 +46,8 @@ public class Enemy : MonoBehaviour
     {
         //Wodotryski
     }
+    public void Despawn()
+    {
+        transform.parent.GetComponent<ObjectPooling>().DespawnObject(gameObject);
+    }
 }
