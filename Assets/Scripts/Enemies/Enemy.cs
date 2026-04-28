@@ -44,6 +44,9 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         //Wodotryski
+        Cave.money += moneyReward;
+        transform.parent.GetComponent<ObjectPooling>().DespawnObject(gameObject);
+
     }
     public void Despawn()
     {
