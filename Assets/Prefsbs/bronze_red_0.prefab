@@ -124,14 +124,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   maxHp: 20
   attack: 1
-  speed: 5
+  speed: 3.75
   moneyReward: 5
   enemyType: 3
   animationMove: {fileID: 0}
   fireArmor: 0
-  waterArmor: 0
+  waterArmor: 15
   airArmor: 0
-  earthArmor: 0
+  earthArmor: 15
 --- !u!95 &4746503860367248048
 Animator:
   serializedVersion: 7

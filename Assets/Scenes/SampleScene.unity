@@ -442,7 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   waves:
   - microWaves:
-    - enemyType: 0
+    - enemyType: 1
       amount: 10
       delay: 1
   delayBetweenWave: 5
@@ -1249,7 +1249,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoolManager
   prefabs:
+  - {fileID: 8692702006999829801, guid: 4376a2b52d770160fae73bd266468a6f, type: 3}
   - {fileID: 8692702006999829801, guid: 712bc67a0ba315c489cdb12d4ff35a56, type: 3}
+  - {fileID: 8692702006999829801, guid: d953c417b4e421a2baf1f2b8a1ecaf6a, type: 3}
+  - {fileID: 8692702006999829801, guid: 654852af025577c0795a5a1da9af4737, type: 3}
+  - {fileID: 8692702006999829801, guid: 28ceb91638922373e9b172e07ad839e8, type: 3}
+  - {fileID: 8692702006999829801, guid: 9d9a0cc85d0f833718b0816a3a80d78e, type: 3}
+  - {fileID: 8692702006999829801, guid: 0f767b419c27e100399fbad861a9bca0, type: 3}
+  - {fileID: 8692702006999829801, guid: 532527aa8dd7b127391bfb107dc141ab, type: 3}
+  - {fileID: 8692702006999829801, guid: 626b276d5b55e1ca2b42626000d2eba5, type: 3}
+  - {fileID: 8692702006999829801, guid: 95f2388b48169a8efa378bb1a435aefc, type: 3}
+  - {fileID: 8692702006999829801, guid: 612f9d4f3b543352a94ff07b857c8541, type: 3}
+  - {fileID: 8692702006999829801, guid: 66b4eba24cea668e1b5612e2d4bafdfe, type: 3}
+  - {fileID: 8692702006999829801, guid: 2cfab532544c7cd99b580b30fb78383a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
