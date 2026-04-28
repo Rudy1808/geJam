@@ -28,7 +28,6 @@ public class Enemy : MonoBehaviour
     public int speed;
     public int moneyReward;
     public EnemyType enemyType;
-    public SpriteRenderer sprite;
     public Animation animationMove;
 
     [Header("Armor Effect")]
