@@ -122,16 +122,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0c02cbdbc6c6c4a8fc7a7f13dedce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  maxHp: 20
-  attack: 1
+  maxHp: 50
+  attack: 10
   speed: 5
-  moneyReward: 5
+  moneyReward: 30
   enemyType: 12
   animationMove: {fileID: 0}
-  fireArmor: 0
-  waterArmor: 0
-  airArmor: 0
-  earthArmor: 0
+  fireArmor: 50
+  waterArmor: 50
+  airArmor: 50
+  earthArmor: 50
 --- !u!95 &4746503860367248048
 Animator:
   serializedVersion: 7
