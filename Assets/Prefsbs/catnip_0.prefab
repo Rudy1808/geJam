@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: -2808921674956313026}
   - component: {fileID: 4746503860367248048}
   - component: {fileID: -7212593379818357186}
-  - component: {fileID: 7432542298061569510}
+  - component: {fileID: 3934970065185835472}
   m_Layer: 6
-  m_Name: maid_0
+  m_Name: catnip_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 343500053833710504, guid: d5f3c8f65dae70de3a46ec4d9349f348, type: 3}
+  m_Sprite: {fileID: 8159344236829881332, guid: 8d0ac9e3833d1d012b2cfa341d4af83e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,16 +122,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0c02cbdbc6c6c4a8fc7a7f13dedce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  maxHp: 200
-  attack: 20
-  speed: 1.75
+  maxHp: 50
+  attack: 2
+  speed: 5
   moneyReward: 50
-  enemyType: 1
+  enemyType: 4
   animationMove: {fileID: 0}
-  fireArmor: 45
-  waterArmor: 30
-  airArmor: 45
-  earthArmor: 30
+  fireArmor: 10
+  waterArmor: 90
+  airArmor: 10
+  earthArmor: 90
 --- !u!95 &4746503860367248048
 Animator:
   serializedVersion: 7
@@ -192,7 +192,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.95, y: 2.39}
+    oldSize: {x: 2.13, y: 2.26}
     newSize: {x: 1.95, y: 2.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -200,7 +200,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.95, y: 2.39}
   m_EdgeRadius: 0
---- !u!50 &7432542298061569510
+--- !u!50 &3934970065185835472
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0

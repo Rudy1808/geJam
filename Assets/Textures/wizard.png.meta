@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 57b719528f0b9e0428007fadfabac2a5
+guid: 6ce8cacb54587df208a3fc6bb09ab2a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1761324976507855644
-    second: cat_gray_0
+      213: 3422849895820167655
+    second: wizard_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cat_gray_0
+      name: wizard_0
       rect:
         serializedVersion: 2
-        x: 33
+        x: 7
         y: 3
-        width: 202
-        height: 225
+        width: 239
+        height: 303
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c1326c6fbbb717810800000000000000
-      internalID: 1761324976507855644
+      spriteID: 7e908df58d7608f20800000000000000
+      internalID: 3422849895820167655
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cat_gray_0: 1761324976507855644
+      wizard_0: 3422849895820167655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

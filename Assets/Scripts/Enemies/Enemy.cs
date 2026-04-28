@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
 
 
     public int attack;
-    public int speed;
+    public float speed;
     public int moneyReward;
     public EnemyType enemyType;
     public Animation animationMove;

@@ -2,7 +2,19 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum EnemyType
 {
-    FirstEnemy
+    Bronze,
+    Maid,
+    BronzeGreen,
+    BronzeRed,
+    Catnip,
+    GoldBlue,
+    GoldPurple,
+    Rudy,
+    Silver,
+    SilverBoots,
+    SilverRed,
+    Slipper,
+    Wizard
 }
 public class PoolManager : MonoBehaviour
 {
@@ -43,7 +55,7 @@ public class PoolManager : MonoBehaviour
             EnemyType type = enemy.enemyType;
             if (enemyPrefabDict.ContainsKey(type))
             {
-                //DebugError - powtórzenie
+                //DebugError - powtï¿½rzenie
                 continue;
             }
             enemyPrefabDict.Add(type, prefab);
