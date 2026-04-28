@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
             value = _hp;
         }
     }
-
+    
 
     public int attack;
     public float speed;
@@ -44,6 +44,9 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         //Wodotryski
+        Cave.money += moneyReward;
+        transform.parent.GetComponent<ObjectPooling>().DespawnObject(gameObject);
+
     }
     public void Despawn()
     {
