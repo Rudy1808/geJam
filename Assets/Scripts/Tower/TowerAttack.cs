@@ -18,6 +18,7 @@ public class TowerAttack : MonoBehaviour
     private void Update()
     {
         Atack();
+        Debug.Log(targetList.Count);
     }
     private void Awake()
     {
@@ -38,7 +39,7 @@ public class TowerAttack : MonoBehaviour
         if ((isFacingRight && distance < 0) || (!isFacingRight && distance > 0))
         {
             isFacingRight = !isFacingRight;
-            transform.localScale = transform.localScale * -1;
+            transform.localScale = new Vector3(transform.localScale.x*-1, transform.localScale.y, transform.localScale.z);
         }
     }
 
@@ -49,15 +50,15 @@ public class TowerAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemies"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            targetList.Enqueue(collision.transform, 1000 - targetList.Peek().position.x);
+            targetList.Enqueue(collision.transform, 1000 - collision.transform.position.x);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemies"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             targetList.Dequeue();
         }
