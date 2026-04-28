@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
             value = _hp;
         }
     }
-    
+
 
     public int attack;
     public float speed;
