@@ -1,0 +1,175 @@
+[33mcommit 4bd0eff470d03d24df0772f6e20097a3216a04ed[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mAnimacje_Chodzenia[m[33m, [m[1;31morigin/dev[m[33m, [m[1;32mdev[m[33m)[m
+Author: jakubowski14 <jakubowski1404@gmail.com>
+Date:   Tue Apr 28 11:25:48 2026 +0200
+
+    Poprawa formatowania w path
+
+[33mcommit e699e71f133636b497360987c500acb852e5262f[m
+Author: jakubowski14 <jakubowski1404@gmail.com>
+Date:   Tue Apr 28 11:24:22 2026 +0200
+
+    Pathy dla enemies
+
+[33mcommit ba103072711460fe0ffca3c22363ad02e1abf93a[m
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Tue Apr 28 10:34:08 2026 +0200
+
+    b
+
+[33mcommit b1bda62ce4e544af7d11a851cf3409abef955e33[m
+Merge: 7e1637e a145679
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Tue Apr 28 10:07:33 2026 +0200
+
+    Merge branch 'dev' of https://github.com/Rudy1808/geJam into dev
+
+[33mcommit 7e1637e0e357dd4ff0ebfbc15f3fc0a931eb8a56[m
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Tue Apr 28 10:07:26 2026 +0200
+
+    jednak teraz
+
+[33mcommit a1456799599e157e26c41758f5ea611b5331c5eb[m
+Author: Blazo810 <mocny.blazer@gmail.com>
+Date:   Tue Apr 28 09:59:38 2026 +0200
+
+    TowerAtack
+
+[33mcommit 1a88915592747823fafcca109ce85055ddd142cb[m[33m ([m[1;32mTurretAtack[m[33m)[m
+Merge: 842018d fc71106
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Tue Apr 28 09:49:17 2026 +0200
+
+    Merge branch 'Animacje' into dev
+
+[33mcommit fc7110679e5258feda109d21e1d1f35b17faf49d[m[33m ([m[1;31morigin/Animacje[m[33m)[m
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Tue Apr 28 09:48:44 2026 +0200
+
+    działa animacja chodzenia
+
+[33mcommit 17704d78c63617d41e53cee8ca0570f4223adddf[m
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Tue Apr 28 08:01:50 2026 +0200
+
+    zapisanieScenyDlaCwelaBłażeja
+
+[33mcommit 842018def260981747cd0d2c40ca814e24c01392[m
+Merge: c6b4454 8f265d3
+Author: Blazo810 <mocny.blazer@gmail.com>
+Date:   Tue Apr 28 02:21:29 2026 +0200
+
+    Merge branch 'Animacje' into dev
+
+[33mcommit c6b44543a3b69639c11da2584491252324f089be[m
+Merge: d7a9dc1 b034d54
+Author: Blazo810 <mocny.blazer@gmail.com>
+Date:   Tue Apr 28 02:15:32 2026 +0200
+
+    Merge branch 'Tower' into dev
+
+[33mcommit 8f265d39d18a10c5308d8b35b41d3af8b6f4621b[m
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Tue Apr 28 01:55:19 2026 +0200
+
+    droga
+
+[33mcommit d7a9dc1710ef0f1737abb1865e67d217aa19b586[m[33m ([m[1;32mmain[m[33m, [m[1;32mSledzenie-Kursora[m[33m)[m
+Merge: 3669b7b ecf2364
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Tue Apr 28 00:53:55 2026 +0200
+
+    Merge branch 'Animacje' into dev
+
+[33mcommit 3669b7b6edb0265d28407e8688a57523c4350528[m
+Merge: 09a8ec2 e5d4bf2
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Tue Apr 28 00:52:16 2026 +0200
+
+    Merge branch 'Cave' into dev
+
+[33mcommit e5d4bf27e7f997032fb20b6afdbc059be6f00498[m[33m ([m[1;31morigin/Cave[m[33m)[m
+Author: Czarnuszek09 <jakub.t.kaminski.09@gmail.com>
+Date:   Tue Apr 28 00:48:03 2026 +0200
+
+    Cave
+
+[33mcommit 09a8ec2d284897ebb547496332c66f104471d16b[m[33m ([m[1;31morigin/enemy[m[33m)[m
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Tue Apr 28 00:32:25 2026 +0200
+
+    spawner
+
+[33mcommit b034d549a87cece940c94b88310ed72911864ad3[m[33m ([m[1;31morigin/Tower[m[33m)[m
+Author: Blazo810 <mocny.blazer@gmail.com>
+Date:   Mon Apr 27 23:00:14 2026 +0200
+
+    Tower Scriptable object
+
+[33mcommit ecf2364362d16c3537306a51bff04755ef877949[m[33m ([m[1;31morigin/Kursor[m[33m, [m[1;32mKursor[m[33m, [m[1;32mAnimacje[m[33m)[m
+Author: jakubowski14 <jakubowski1404@gmail.com>
+Date:   Mon Apr 27 22:44:23 2026 +0200
+
+    Dodanie backgrounda i maid (maid do poprawki)
+
+[33mcommit 2560fdb6ac8fb6f50d4f084e98a17a766e607d8b[m
+Merge: 5885e9b b373a2e
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Mon Apr 27 22:29:59 2026 +0200
+
+    Merge branch 'Cave' of https://github.com/Rudy1808/geJam into Cave
+
+[33mcommit 5885e9b3f4a3a1284b5cd5745c629a322c2c4baa[m
+Merge: 08e1c63 c6c5b68
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Mon Apr 27 22:29:18 2026 +0200
+
+    enemy
+
+[33mcommit b373a2ecaf6f2851668da9652dfe0ae6229567ac[m
+Author: Czarnuszek09 <jakub.t.kaminski.09@gmail.com>
+Date:   Mon Apr 27 22:26:59 2026 +0200
+
+    Cave poczatek
+
+[33mcommit c6c5b68c7e36f35729f02a1078d446bfc93a0f07[m
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Mon Apr 27 22:23:38 2026 +0200
+
+    enemyBase
+
+[33mcommit 08e1c63907bc7c930b7ba778ee2ca8b9bd0166d0[m[33m ([m[1;32mCave[m[33m)[m
+Author: jakubowski14 <jakubowski1404@gmail.com>
+Date:   Mon Apr 27 19:51:21 2026 +0200
+
+    Kontynuacja
+
+[33mcommit 05d0ed3b607688cc006d5cdcc82cbe59adc226a0[m
+Author: j.anderson <kali@localhost.localdomain>
+Date:   Mon Apr 27 16:49:48 2026 +0000
+
+    Cave test
+
+[33mcommit 17f3e148f76033ff52e7183814a324db9e644733[m
+Author: j.anderson <kali@localhost.localdomain>
+Date:   Mon Apr 27 16:47:33 2026 +0000
+
+    Cave
+
+[33mcommit 90f6d34f8b1606e844d31d27c9c14f89c7daf8f1[m
+Author: jakubowski14 <jakubowski1404@gmail.com>
+Date:   Mon Apr 27 18:46:21 2026 +0200
+
+    test
+
+[33mcommit ed83f4005a7b8a525d37f97f4785167f49669e6a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/ObjectPooling[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Enemy[m[33m, [m[1;32mEnemy[m[33m)[m
+Author: Rudy1808 <chabasinskimarcel796@gmail.com>
+Date:   Mon Apr 27 13:17:32 2026 +0200
+
+    Start Commit
+
+[33mcommit 48d896f149e84887876f7a56d0b04219bedc2b65[m
+Author: Rudy1808 <168224324+Rudy1808@users.noreply.github.com>
+Date:   Mon Apr 27 12:58:23 2026 +0200
+
+    Initial commit
