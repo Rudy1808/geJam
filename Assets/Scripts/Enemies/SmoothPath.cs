@@ -7,7 +7,10 @@ public class SmoothPath : MonoBehaviour
     int i = 0;
     void Start()
     {
-       
+           Transform[] all = path.GetComponentsInChildren<Transform>();
+    path.wayPoints = new Transform[all.Length - 1];
+    for (int j = 0; j < path.wayPoints.Length; j++)
+        path.wayPoints[j] = all[j + 1];
     }
 
     void Update()
