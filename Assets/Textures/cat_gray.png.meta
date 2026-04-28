@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d5f3c8f65dae70de3a46ec4d9349f348
+guid: 57b719528f0b9e0428007fadfabac2a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 343500053833710504
-    second: pokojuf-chlop_0
+      213: 1761324976507855644
+    second: cat_gray_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: maid_0
+      name: cat_gray_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 10
-        width: 195
-        height: 239
+        x: 33
+        y: 3
+        width: 202
+        height: 225
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8abf511aa7b54c400800000000000000
-      internalID: 343500053833710504
+      spriteID: c1326c6fbbb717810800000000000000
+      internalID: 1761324976507855644
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7c096258acc87aaa38c350364419a927
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      maid_0: 343500053833710504
+      cat_gray_0: 1761324976507855644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -20,7 +20,8 @@ public class Spawner : MonoBehaviour
 {
     public List<Wave> waves = new List<Wave>();
     public float delayBetweenWave;
-    public float delayIncrase;
+    public float delayIncrease;
+    public Path path;
 
     void Start()
     {
@@ -35,13 +36,12 @@ public class Spawner : MonoBehaviour
                 for (int k = 0; k < waves[i].microWaves[j].amount; k++)
                 {
                     yield return new WaitForSeconds(waves[i].microWaves[j].delay);
-                    //PoolManager.Spawn(waves[i].microWaves[j].enemyType,transform.position);
-                    //game.explode();
+                    PoolManager.Spawn(waves[i].microWaves[j].enemyType,transform.position, path);
                     Debug.Log("spawn");
                 }
             }
             yield return new WaitForSeconds(delayBetweenWave);
-            delayBetweenWave += delayIncrase;
+            delayBetweenWave += delayIncrease;
         }
     }
 }

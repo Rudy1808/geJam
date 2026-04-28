@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum EnemyType
 {
+    FirstEnemy
 }
 public class PoolManager : MonoBehaviour
 {
@@ -50,19 +51,22 @@ public class PoolManager : MonoBehaviour
     }
 
 
-    public static void Spawn(EnemyType type, Vector3 spawnPosition)
+    public static void Spawn(EnemyType type, Vector3 spawnPosition, Path path)
     {
         if (!enemyPoolDict.TryGetValue(type, out Transform value))
         {
             string name = type.ToString() + "Pool";
+
             GameObject newPool = new GameObject(name);
-            Instantiate(newPool, parent);
-            enemyPoolDict.Add(type, newPool.GetComponent<Transform>());
+            newPool.transform.SetParent(parent);
+
+            enemyPoolDict.Add(type, newPool.transform);
+
             ObjectPooling newPoolingScript = newPool.AddComponent<ObjectPooling>();
             newPoolingScript.prefab = enemyPrefabDict[type];
-
         }
+
         ObjectPooling pool = enemyPoolDict[type].GetComponent<ObjectPooling>();
-        pool.SpawnObject(spawnPosition);
+        pool.SpawnObject(spawnPosition, path);
     }
 }
