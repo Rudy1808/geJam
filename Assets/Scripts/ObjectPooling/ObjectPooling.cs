@@ -31,6 +31,7 @@ public class ObjectPooling : MonoBehaviour
     }
     public void DespawnObject(GameObject obj)
     {
+        obj.GetComponent<SmoothPath>().i = 0;
         enemyCount--;
         obj.SetActive(false);
         ObjectPool.Enqueue(obj);
