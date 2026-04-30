@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CursorFollowing : MonoBehaviour
 {
     public GameObject towerPrefab;
-    public LayerMask towerRadiusLayer;
+    private LayerMask towerRadiusLayer;
 
     private float towerRadiusValue = 3.5f;
     private float attackRadiusValue = 6f;
@@ -28,6 +28,7 @@ public class CursorFollowing : MonoBehaviour
     {
         mainCam = Camera.main;
 
+        towerRadiusLayer = LayerMask.NameToLayer("TowerRadius");
         cursorInstance = Instantiate(towerPrefab, Vector3.zero, Quaternion.identity);
         cursorObject = cursorInstance.transform;
         towerRadius = cursorObject.Find("towerRadius");
