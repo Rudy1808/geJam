@@ -49,8 +49,22 @@ public class CursorFollowing : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(OnImageClicked);
     }
 
+    private static CursorFollowing activePlacer = null;
+
     void OnImageClicked()
     {
+        if (activePlacer == this)
+        {
+            StopPlacing();
+            return;
+        }
+
+        if (activePlacer != null)
+        {
+            activePlacer.StopPlacing();
+        }
+
+        activePlacer = this;
         isPlacing = true;
         cursorInstance.SetActive(true);
         Cursor.visible = false;
@@ -76,25 +90,26 @@ public class CursorFollowing : MonoBehaviour
             ? new Color(0.2f, 1f, 0.2f, towerRadiusRenderer.color.a)
             : new Color(1f, 0.2f, 0.2f, towerRadiusRenderer.color.a);
 
+        if (Keyboard.current.escapeKey.wasPressedThisFrame && isPlacing)
+        {
+            StopPlacing();
+        }
         if (Mouse.current.leftButton.wasPressedThisFrame && canPlace)
         {
             GameObject placed = Instantiate(towerPrefab, mouseWorld, Quaternion.identity);
 
-            // Pobierz komponenty postawionej wieży
             SpriteRenderer placedRenderer = placed.GetComponent<SpriteRenderer>();
             Transform placedTowerRadius = placed.transform.Find("towerRadius");
             Transform placedAttackRadius = placed.transform.Find("attackRadius");
 
-            // Smok 100% widoczny
             SetAlpha(placedRenderer, 1f);
-
-            // Okręgi niewidoczne
             SetAlpha(placedTowerRadius.GetComponent<SpriteRenderer>(), 0f);
             SetAlpha(placedAttackRadius.GetComponent<SpriteRenderer>(), 0f);
 
             isPlacing = false;
             cursorInstance.SetActive(false);
             Cursor.visible = true;
+            activePlacer = null;
         }
     }
 
@@ -109,6 +124,16 @@ public class CursorFollowing : MonoBehaviour
         hits.Remove(previewCollider);
 
         canPlace = hits.Count == 0;
+    }
+
+    void StopPlacing()
+    {
+        isPlacing = false;
+        cursorInstance.SetActive(false);
+        Cursor.visible = true;
+
+        if (activePlacer == this)
+            activePlacer = null;
     }
 
     void SetAlpha(SpriteRenderer rend, float alpha)

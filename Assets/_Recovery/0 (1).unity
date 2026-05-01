@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 4925855}
   - component: {fileID: 4925854}
   - component: {fileID: 4925856}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: mapa_nowa_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -405,10 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c65b9919fa3afd4eaadf3ae91b99294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CursorFollowing
-  towerPrefab: {fileID: 17373965827455726, guid: 932b54ff2f4093348985e0a29c6a3353, type: 3}
-  towerRadiusLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  towerPrefab: {fileID: 17373965827455726, guid: 877f2c795b4431742b2588c7db784f4f, type: 3}
 --- !u!114 &860216556961847618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,10 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c65b9919fa3afd4eaadf3ae91b99294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CursorFollowing
-  towerPrefab: {fileID: 1352391107312528250, guid: 532552e70024cde489d1983e3cdb6de3, type: 3}
-  towerRadiusLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  towerPrefab: {fileID: 1352391107312528250, guid: 9dd8ca4db2504b044901eaf58e611f65, type: 3}
 --- !u!114 &5788727126918651100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,10 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c65b9919fa3afd4eaadf3ae91b99294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CursorFollowing
-  towerPrefab: {fileID: 1600318440284774935, guid: 0fcee166d61e4ac4a9d5349470638028, type: 3}
-  towerRadiusLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  towerPrefab: {fileID: 1600318440284774935, guid: b8f71a75d6a3eb94383b7df9ecfd7444, type: 3}
 --- !u!1 &3256586393181715985
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,10 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c65b9919fa3afd4eaadf3ae91b99294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CursorFollowing
-  towerPrefab: {fileID: 6691553187945021380, guid: 81194c4a5c3d3234c8a1454ec11bd9ce, type: 3}
-  towerRadiusLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  towerPrefab: {fileID: 6691553187945021380, guid: 9cce196d354b63a4c9fc2462ed4971ae, type: 3}
 --- !u!114 &5958311790772476064
 MonoBehaviour:
   m_ObjectHideFlags: 0
