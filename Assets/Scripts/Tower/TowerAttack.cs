@@ -11,6 +11,8 @@ public class TowerAttack : MonoBehaviour
 
     bool isFacingRight;
 
+    [SerializeField] private StatusEffectSO effectToApply;
+
     CircleCollider2D col;
 
     public PriorityQueue<Transform> targetList = new PriorityQueue<Transform>();
@@ -45,14 +47,17 @@ public class TowerAttack : MonoBehaviour
 
     void Shoot(Transform target)
     {
-        Debug.Log("Strza³");
     }
 
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             targetList.Enqueue(collision.transform, 1000 - collision.transform.position.x);
+            
+        EffectHandler effect = collision.GetComponent<EffectHandler>();
+        effect.AddEffect(effectToApply);
         }
     }
 
