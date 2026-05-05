@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 public enum EnemyType
@@ -47,25 +48,16 @@ public class PoolManager : MonoBehaviour
         foreach (GameObject prefab in prefabs)
         {
             Enemy enemy = prefab.GetComponent<Enemy>();
-            if (enemy == null)
-            {
-                //DebugError - nie ma skryptu
-                continue;
-            }
+
             EnemyType type = enemy.enemyType;
-            if (enemyPrefabDict.ContainsKey(type))
-            {
-                //DebugError - powt�rzenie
-                continue;
-            }
+
             enemyPrefabDict.Add(type, prefab);
         }
     }
 
-
-    public static void Spawn(EnemyType type, Vector3 spawnPosition, Path path)
+    private void Start()
     {
-        if (!enemyPoolDict.TryGetValue(type, out Transform value))
+        foreach(EnemyType type in Enum.GetValues(typeof(EnemyType)))
         {
             string name = type.ToString() + "Pool";
 
@@ -76,9 +68,18 @@ public class PoolManager : MonoBehaviour
 
             ObjectPooling newPoolingScript = newPool.AddComponent<ObjectPooling>();
             newPoolingScript.prefab = enemyPrefabDict[type];
+            for (int i = 0; i < 50; i++)
+            {
+                newPoolingScript.CreateObject();
+            }
         }
+    }
 
+    public static void Spawn(EnemyType type, Vector3 spawnPosition, Path path)
+    {
         ObjectPooling pool = enemyPoolDict[type].GetComponent<ObjectPooling>();
-        pool.SpawnObject(spawnPosition, path);
+        GameObject obj = pool.SpawnObject(spawnPosition);
+        PathFollowing pathFollowing = obj.GetComponent<PathFollowing>();
+        pathFollowing.path = path;
     }
 }
