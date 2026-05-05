@@ -2624,6 +2624,7 @@ MonoBehaviour:
   damage: 0
   range: 10
   fireRate: 0
+  effectToApply: {fileID: 11400000, guid: 16e9bc5e4ee4fbe43a36702ad806164c, type: 2}
 --- !u!114 &1961970318
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MudEffect
   m_EditorClassIdentifier: Assembly-CSharp::SlownessEffect
   effectName: MudEffect
-  duration: 100
-  slowPercent: 0.5
+  duration: 2
+  slowPercent: 0.51
