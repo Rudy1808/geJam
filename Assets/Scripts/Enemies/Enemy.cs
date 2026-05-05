@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
         }
 
         set
-        {
+        { 
             _hp = Mathf.Clamp(0, _hp, maxHp);
 
             if(_hp == 0)
