@@ -12,8 +12,6 @@ public class TowerAttack : MonoBehaviour
     bool isFacingRight;
 
     [SerializeField] private SpellSO spell;
-    [SerializeField] private StatusEffectSO effectToApply;
-
     CircleCollider2D col;
 
     public PriorityQueue<Transform> targetList = new PriorityQueue<Transform>();
@@ -60,10 +58,7 @@ public class TowerAttack : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            targetList.Enqueue(collision.transform, 1000 - collision.transform.position.x);
-            
-        EffectHandler effect = collision.GetComponent<EffectHandler>();
-        effect.AddEffect(effectToApply);
+           
         }
     }
 

@@ -111,6 +111,8 @@ MonoBehaviour:
   damage: 0
   range: 8
   fireRate: 0
+  spell: {fileID: 11400000, guid: cc10b41482bd474458bf42549c747608, type: 2}
+  effectToApply: {fileID: 0}
 --- !u!114 &-597784521935534304
 MonoBehaviour:
   m_ObjectHideFlags: 0

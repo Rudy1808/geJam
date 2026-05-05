@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1378904920120123393}
   - component: {fileID: -6189894659230073799}
-  - component: {fileID: 7964833790038809712}
   - component: {fileID: -8476074486734016018}
+  - component: {fileID: -6189992286856683913}
   m_Layer: 0
   m_Name: SplashSpell
   m_TagString: Untagged
@@ -93,18 +93,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
---- !u!114 &7964833790038809712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9031302754496192408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6fa2e3a4fcc47c45bca843b7397e025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SplashScript
 --- !u!61 &-8476074486734016018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -151,3 +139,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
+--- !u!114 &-6189992286856683913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9031302754496192408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba097772ea32bc14a9967e43d04012ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplashScript
+  SO: {fileID: 0}
