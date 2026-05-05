@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
         {
             return _hp;
         }
-
+ 
         set
         {
             _hp = Mathf.Clamp(0, _hp, maxHp);
