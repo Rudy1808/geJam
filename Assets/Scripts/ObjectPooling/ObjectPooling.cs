@@ -8,13 +8,13 @@ public class ObjectPooling : MonoBehaviour
 
     Queue<GameObject> ObjectPool = new Queue<GameObject>();
 
-    void CreateObject()
+    public void CreateObject()
     {
         GameObject obj = Instantiate(prefab, transform);
         obj.SetActive(false);
         ObjectPool.Enqueue(obj);
     }
-    public GameObject SpawnObject(Vector3 position, Path path)
+    public GameObject SpawnObject(Vector3 position)
     {
         if (ObjectPool.Count <= 0)
             CreateObject();
@@ -22,16 +22,12 @@ public class ObjectPooling : MonoBehaviour
         GameObject obj = ObjectPool.Dequeue();
         obj.SetActive(true);
         obj.transform.position = position;
-        SmoothPath smoothPath = obj.GetComponent<SmoothPath>();
-        smoothPath.path = path;
-
         enemyCount++;
 
         return obj;
     }
     public void DespawnObject(GameObject obj)
     {
-        obj.GetComponent<SmoothPath>().i = 0;
         enemyCount--;
         obj.SetActive(false);
         ObjectPool.Enqueue(obj);

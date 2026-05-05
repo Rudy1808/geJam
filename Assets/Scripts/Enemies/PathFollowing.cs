@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SmoothPath : MonoBehaviour
+public class PathFollowing : MonoBehaviour
 {
     [HideInInspector] public Path path;
     [HideInInspector] public float speed;
@@ -29,5 +29,9 @@ public class SmoothPath : MonoBehaviour
     private void OnEnable()
     {
         speed = GetComponent<Enemy>().speed;
+    }
+    private void OnDisable()
+    {
+        i = 0;
     }
 }
