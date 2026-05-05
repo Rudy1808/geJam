@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
 
         set
         {
-            _hp = Mathf.Clamp(_hp, 0, maxHp);
+            _hp = Mathf.Clamp(0, _hp, maxHp);
 
             if(_hp == 0)
             {
@@ -35,8 +35,13 @@ public class Enemy : MonoBehaviour
     public int waterArmor;
     public int airArmor;
     public int earthArmor;
-    
-    void TakeDamage(int damage)
+
+    private void Start()
+    {
+        _hp = maxHp;
+    }
+
+    public void TakeDamage(int damage)
     {
         hp-=damage;
     }
@@ -46,10 +51,12 @@ public class Enemy : MonoBehaviour
         //Wodotryski
         Cave.money += moneyReward;
         transform.parent.GetComponent<ObjectPooling>().DespawnObject(gameObject);
+        Debug.Log("die");
 
     }
     public void Despawn()
     {
         transform.parent.GetComponent<ObjectPooling>().DespawnObject(gameObject);
+        Debug.Log("despawn");
     }
 }

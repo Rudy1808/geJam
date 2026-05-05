@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class EffectHandler : MonoBehaviour
 {
-    public Enemy enemy;
-    private readonly List<ActiveEffect> _activeEffects;
+    [HideInInspector] public Enemy enemy;
+    private readonly List<ActiveEffect> ListaKrzak = new List<ActiveEffect>();
 
-    private void Awake() => enemy = GetComponent<Enemy>();
+    private void Awake()
+    {
+        enemy = GetComponent<Enemy>();
+    } 
 
     private void Update()
     {
-        for (int i = _activeEffects.Count - 1; i >= 0; i--)
+        if(ListaKrzak == null) return;
+
+        for (int i = ListaKrzak.Count - 1; i >= 0; i--)
         {
-            var effect = _activeEffects[i];
+            var effect = ListaKrzak[i];
             effect.Definition.OnTick(this, Time.deltaTime);
 
             effect.RemainingTime -= Time.deltaTime;
@@ -24,19 +29,28 @@ public class EffectHandler : MonoBehaviour
 
     public void AddEffect(StatusEffectSO effect)
     {
-        var StatuEffect = new ActiveEffect(effect);
-        _activeEffects.Add(StatuEffect);
-        effect.OnApply(this);
+        var statusEffect = new ActiveEffect(effect);
+        for(int i = 0; i < ListaKrzak.Count; i++)
+        {
+            if (ListaKrzak[i].Definition == effect)
+            {
+                ListaKrzak[i].RemainingTime = effect.duration;
+                return;
+            }
+        }
+
+        ListaKrzak.Add(statusEffect);
+        ListaKrzak[ListaKrzak.Count-1].Definition.OnApply(this);
     }
 
     public void RemoveEffectAt(int index)
     {
-        var effect = _activeEffects[index];
+        var effect = ListaKrzak[index];
         effect.Definition.OnRemove(this);
 
         if (effect.VisualGO != null)
             Destroy(effect.VisualGO);
 
-        _activeEffects.RemoveAt(index);
+        ListaKrzak.RemoveAt(index);
     }
 }
