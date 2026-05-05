@@ -11,16 +11,21 @@ public class TowerAttack : MonoBehaviour
 
     bool isFacingRight;
 
+    [SerializeField] private SpellSO spell;
     [SerializeField] private StatusEffectSO effectToApply;
 
     CircleCollider2D col;
 
     public PriorityQueue<Transform> targetList = new PriorityQueue<Transform>();
 
+    public void Start()
+    {
+        spell.Cast(new Vector2(-4,-8));
+    }
+
     private void Update()
     {
         Atack();
-        Debug.Log(targetList.Count);
     }
     private void Awake()
     {
@@ -47,6 +52,7 @@ public class TowerAttack : MonoBehaviour
 
     void Shoot(Transform target)
     {
+
     }
 
     

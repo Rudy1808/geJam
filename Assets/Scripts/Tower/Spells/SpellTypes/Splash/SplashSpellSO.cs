@@ -5,9 +5,13 @@ using UnityEngine;
 public class SplashSpellSO : SpellSO
 {
     public int duration;
+    public Vector2 coliderSize;
     public GameObject prefab;
 public override void Cast(Vector2 postion)
     {
-       Instantiate(prefab,new Vector3(postion.x,postion.y,0),Quaternion.identity);
+        GameObject spellObject = Instantiate(prefab,new Vector3(postion.x,postion.y,0),Quaternion.identity);
+        SplashScript script = spellObject.GetComponent<SplashScript>();
+        script.SO = this;
+        script.OnCast();
     }
 }
