@@ -18,8 +18,8 @@ public class Cave : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Entered");
-        Debug.Log(collision);
+        //Debug.Log("Entered");
+        //Debug.Log(collision);
         if (collision.CompareTag("Enemy"))
         {
             Enemy enemy = collision.GetComponent<Enemy>();
