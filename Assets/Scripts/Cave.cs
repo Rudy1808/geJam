@@ -3,7 +3,18 @@ using UnityEngine;
 public class Cave : MonoBehaviour
 {
     public int hp;
-    public static int money;
+    public static int _money = 100;
+    public static int Money {
+        get
+        {
+            return _money;
+        }
+        set 
+        {
+            _money = value;
+            StatsController.SetMoney(value);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

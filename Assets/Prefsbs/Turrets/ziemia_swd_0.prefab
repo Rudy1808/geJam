@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1630080610807629530}
   - component: {fileID: 5298712003169600676}
   - component: {fileID: 4043200942480231504}
+  - component: {fileID: 2228489249167802918}
   m_Layer: 0
   m_Name: ziemia_swd_0
   m_TagString: Untagged
@@ -108,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
   levels: []
+  cost: 70
 --- !u!114 &4043200942480231504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +125,42 @@ MonoBehaviour:
   damage: 0
   range: 11
   fireRate: 0
+--- !u!58 &2228489249167802918
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17373965827455726}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2.56
 --- !u!1 &1785704135233050008
 GameObject:
   m_ObjectHideFlags: 0

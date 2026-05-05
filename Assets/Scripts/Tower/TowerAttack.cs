@@ -18,7 +18,7 @@ public class TowerAttack : MonoBehaviour
     private void Update()
     {
         Atack();
-        Debug.Log(targetList.Count);
+        //Debug.Log(targetList.Count);
     }
     private void Awake()
     {

@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class StatsController : MonoBehaviour
 {
+    public static StatsController instance;
     StatsModel model;
     StatsView view;
 
     private void Awake()
     {
+        instance = this; 
         view = GetComponent<StatsView>();
-
         model = new StatsModel();
     }
 
@@ -18,9 +19,11 @@ public class StatsController : MonoBehaviour
         view.refresh(model);
     }
 
-    public void SetStats(int money)
+    public static void SetMoney(int money)
     {
-        model.money = money;
-        view.refresh(model);
+        Debug.Log(instance.view == null? "view to null" : "view git");
+        Debug.Log(instance == null? "instance do dupy": "jednak nie");
+        instance.model.money = money;
+        instance.view.refresh(instance.model);
     }
 }

@@ -5,6 +5,7 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] private TowerUpgradeStats[] levels;
     int currentLevel = 0;
+    [SerializeField] public int cost;
 
     public TowerUpgradeStats CurrentData => levels[currentLevel];
 

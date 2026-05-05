@@ -26,11 +26,14 @@ public class CursorFollowing : MonoBehaviour
     private bool canPlace = true;
     private bool isPlacing = false;
 
+    private int cost;
+
     void Start()
     {
         mainCam = Camera.main;
         attackRadiusValue = towerPrefab.GetComponent<TowerAttack>().range;
-
+        cost = towerPrefab.GetComponent<Tower>().cost;
+        Debug.Log(cost);
         towerRadiusLayer = LayerMask.NameToLayer("TowerRadius");
         cursorInstance = Instantiate(towerPrefab, Vector3.zero, Quaternion.identity);
         cursorObject = cursorInstance.transform;
@@ -81,7 +84,7 @@ public class CursorFollowing : MonoBehaviour
     }
 
     void Update()
-    {
+    { 
         if (!isPlacing) return;
 
         Vector2 mouseScreen = Mouse.current.position.ReadValue();
@@ -102,6 +105,14 @@ public class CursorFollowing : MonoBehaviour
         }
         if (Mouse.current.leftButton.wasPressedThisFrame && canPlace)
         {
+            if (Cave.Money - cost >= 0)
+                Cave.Money -= cost;
+            else
+            {
+                //coś
+            }
+            Debug.Log(Cave.Money);
+
             GameObject placed = Instantiate(towerPrefab, mouseWorld, Quaternion.identity);
 
             SpriteRenderer placedRenderer = placed.GetComponent<SpriteRenderer>();
@@ -111,6 +122,7 @@ public class CursorFollowing : MonoBehaviour
             SetAlpha(placedRenderer, 1f);
             SetAlpha(placedTowerRadius.GetComponent<SpriteRenderer>(), 0f);
             SetAlpha(placedAttackRadius.GetComponent<SpriteRenderer>(), 0f);
+
 
             isPlacing = false;
             cursorInstance.SetActive(false);

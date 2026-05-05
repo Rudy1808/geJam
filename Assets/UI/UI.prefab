@@ -451,7 +451,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CursorFollowing
   towerPrefab: {fileID: 17373965827455726, guid: 932b54ff2f4093348985e0a29c6a3353, type: 3}
   towerRadiusValue: 3.5
-  attackRadiusValue: 9
   towerRadiusOffsetY: -1
   attackRadiusOffsetY: -1
 --- !u!1 &2821108462305917190
@@ -589,7 +588,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CursorFollowing
   towerPrefab: {fileID: 1352391107312528250, guid: 532552e70024cde489d1983e3cdb6de3, type: 3}
   towerRadiusValue: 3.5
-  attackRadiusValue: 9
   towerRadiusOffsetY: -1
   attackRadiusOffsetY: -1
 --- !u!1 &2946237301429888702
@@ -727,7 +725,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CursorFollowing
   towerPrefab: {fileID: 1600318440284774935, guid: 0fcee166d61e4ac4a9d5349470638028, type: 3}
   towerRadiusValue: 3.5
-  attackRadiusValue: 9
   towerRadiusOffsetY: -1
   attackRadiusOffsetY: -1
 --- !u!1 &3256586393181715985
@@ -865,7 +862,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CursorFollowing
   towerPrefab: {fileID: 6691553187945021380, guid: 81194c4a5c3d3234c8a1454ec11bd9ce, type: 3}
   towerRadiusValue: 3.5
-  attackRadiusValue: 9
   towerRadiusOffsetY: -1
   attackRadiusOffsetY: -1
 --- !u!1 &5086077018890728038
