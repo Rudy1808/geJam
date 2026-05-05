@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6523265248235571355}
   - component: {fileID: 5732017960386350087}
+  - component: {fileID: 1970304507043897629}
+  - component: {fileID: 3890614415919016139}
   m_Layer: 0
   m_Name: woda_swd_0
   m_TagString: Untagged
@@ -93,6 +95,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1970304507043897629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352391107312528250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fc2ad89bc5bc043b983cdd50edffad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
+  levels: []
+--- !u!114 &3890614415919016139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352391107312528250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9cd264fa6f072f419de35b1493dabab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerAttack
+  damage: 0
+  range: 10
+  fireRate: 0
 --- !u!1 &1605885799972663257
 GameObject:
   m_ObjectHideFlags: 0

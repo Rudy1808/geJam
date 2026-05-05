@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4420702573036784347}
   - component: {fileID: 1630080610807629530}
+  - component: {fileID: 5298712003169600676}
+  - component: {fileID: 4043200942480231504}
   m_Layer: 0
   m_Name: ziemia_swd_0
   m_TagString: Untagged
@@ -93,6 +95,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &5298712003169600676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17373965827455726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fc2ad89bc5bc043b983cdd50edffad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
+  levels: []
+--- !u!114 &4043200942480231504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17373965827455726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9cd264fa6f072f419de35b1493dabab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerAttack
+  damage: 0
+  range: 11
+  fireRate: 0
 --- !u!1 &1785704135233050008
 GameObject:
   m_ObjectHideFlags: 0

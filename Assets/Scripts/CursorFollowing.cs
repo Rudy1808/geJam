@@ -8,8 +8,10 @@ public class CursorFollowing : MonoBehaviour
     public GameObject towerPrefab;
     private LayerMask towerRadiusLayer;
 
-    private float towerRadiusValue = 3.5f;
-    private float attackRadiusValue = 6f;
+    [SerializeField] private float towerRadiusValue;
+    private float attackRadiusValue;
+    [SerializeField] private float towerRadiusOffsetY;
+    [SerializeField] private float attackRadiusOffsetY;
 
     private Camera mainCam;
     private GameObject cursorInstance;
@@ -27,6 +29,7 @@ public class CursorFollowing : MonoBehaviour
     void Start()
     {
         mainCam = Camera.main;
+        attackRadiusValue = towerPrefab.GetComponent<TowerAttack>().range;
 
         towerRadiusLayer = LayerMask.NameToLayer("TowerRadius");
         cursorInstance = Instantiate(towerPrefab, Vector3.zero, Quaternion.identity);
@@ -43,6 +46,9 @@ public class CursorFollowing : MonoBehaviour
         cursorObject.localScale = new Vector3(1f, 1f, 1f);
         towerRadius.localScale = new Vector3(towerRadiusValue, towerRadiusValue, 1f);
         attackRadius.localScale = new Vector3(attackRadiusValue, attackRadiusValue, 1f);
+
+        towerRadius.localPosition = new Vector3(0f, towerRadiusOffsetY, 0f);
+        attackRadius.localPosition = new Vector3(0f, attackRadiusOffsetY, 0f);
 
         cursorInstance.SetActive(false);
 

@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class TowerAttack : MonoBehaviour
 {
     public int damage;
-    public int range = 6;
+    public float range = 6f;
     public float fireRate;
 
     bool isFacingRight;
