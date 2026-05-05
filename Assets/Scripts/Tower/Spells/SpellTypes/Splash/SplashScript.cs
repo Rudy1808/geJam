@@ -5,6 +5,7 @@ public class SplashScript : MonoBehaviour
     public SplashSpellSO SO;
     BoxCollider2D col;
     SpriteRenderer spriteRenderer;
+    float timer = 0;
 
     public void OnCast()
     {
@@ -13,6 +14,20 @@ public class SplashScript : MonoBehaviour
 
         spriteRenderer.sprite = SO.sprite;
         col.size = SO.coliderSize;
+    }
+    private void Update()
+    {
+        if(timer >= SO.duration)
+        {
+            timer = 0;
+            Die();
+        }
+        timer += Time.deltaTime;
+    }
+
+    private void Die()
+    {
+        Destroy(this);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,5 +48,7 @@ public class SplashScript : MonoBehaviour
             }
         }
     }
+
+
 
 }
