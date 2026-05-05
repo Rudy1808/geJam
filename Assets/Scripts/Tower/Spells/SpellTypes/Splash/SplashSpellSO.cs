@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SplashSpellSO", menuName = "Scriptable Objects/Spells/SplashSpellSO")]
 public class SplashSpellSO : SpellSO
 {
+    public bool isDurable;
     public int duration;
     public Vector2 coliderSize;
     public GameObject prefab;

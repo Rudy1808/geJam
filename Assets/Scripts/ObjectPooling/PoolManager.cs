@@ -65,13 +65,9 @@ public class PoolManager : MonoBehaviour
             newPool.transform.SetParent(parent);
 
             enemyPoolDict.Add(type, newPool.transform);
-
-            ObjectPooling newPoolingScript = newPool.AddComponent<ObjectPooling>();
-            newPoolingScript.prefab = enemyPrefabDict[type];
-            for (int i = 0; i < 50; i++)
-            {
-                newPoolingScript.CreateObject();
-            }
+            newPool.SetActive(false);
+            newPool.AddComponent<ObjectPooling>().prefab = enemyPrefabDict[type];
+            newPool.SetActive(true);
         }
     }
 

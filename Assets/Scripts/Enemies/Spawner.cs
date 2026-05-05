@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
                 for (int k = 0; k < waves[i].microWaves[j].amount; k++)
                 {
                     yield return new WaitForSeconds(waves[i].microWaves[j].delay);
-                    PoolManager.Spawn(waves[i].microWaves[j].enemyType,transform.position, path);
+                    PoolManager.Spawn(waves[i].microWaves[j].enemyType, transform.position, path);
                     //Debug.Log("spawn");
                 }
             }

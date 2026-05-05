@@ -32,4 +32,12 @@ public class ObjectPooling : MonoBehaviour
         obj.SetActive(false);
         ObjectPool.Enqueue(obj);
     }
-} 
+
+    private void OnEnable()
+    {
+        for (int i = 0; i < 50; i++)
+        {
+            CreateObject();
+        }
+    }
+}
