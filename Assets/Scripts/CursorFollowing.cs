@@ -111,7 +111,7 @@ public class CursorFollowing : MonoBehaviour
             {
                 //coś
             }
-            Debug.Log(Cave.Money);
+            //Debug.Log(Cave.Money);
 
             GameObject placed = Instantiate(towerPrefab, mouseWorld, Quaternion.identity);
 
