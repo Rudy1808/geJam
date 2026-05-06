@@ -12,7 +12,7 @@ public class Cave : MonoBehaviour
         set 
         {
             _money = value;
-            StatsController.SetMoney(value);
+            //StatsController.SetMoney(value);
         }
     }
 

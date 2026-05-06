@@ -581,6 +581,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 358199271911399403, guid: 54be645b84c984c42b54e64dcdcf46c9, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 1352391107312528250, guid: 88b4e627ef2294940a559765c50bfdad, type: 3}
     - target: {fileID: 1347119775041904781, guid: 54be645b84c984c42b54e64dcdcf46c9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -677,6 +681,18 @@ PrefabInstance:
       propertyPath: towerPrefab
       value: 
       objectReference: {fileID: 1600318440284774935, guid: 7fce424e0e6dabf489d6b3513fdfbc48, type: 3}
+    - target: {fileID: 6127577656315847711, guid: 54be645b84c984c42b54e64dcdcf46c9, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 1600318440284774935, guid: 7fce424e0e6dabf489d6b3513fdfbc48, type: 3}
+    - target: {fileID: 6257101954555987090, guid: 54be645b84c984c42b54e64dcdcf46c9, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 6691553187945021380, guid: 723c0447a4863ad49b578624509fdb00, type: 3}
+    - target: {fileID: 6885462554904697762, guid: 54be645b84c984c42b54e64dcdcf46c9, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 17373965827455726, guid: 24fee92f3412acd4fb854e5d143ddebf, type: 3}
     - target: {fileID: 8463254365090275918, guid: 54be645b84c984c42b54e64dcdcf46c9, type: 3}
       propertyPath: towerPrefab
       value: 

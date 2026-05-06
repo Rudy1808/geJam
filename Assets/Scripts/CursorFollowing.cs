@@ -33,7 +33,7 @@ public class CursorFollowing : MonoBehaviour
         mainCam = Camera.main;
         attackRadiusValue = towerPrefab.GetComponent<TowerAttack>().range;
         cost = towerPrefab.GetComponent<Tower>().cost;
-        Debug.Log(cost);
+        //Debug.Log(cost);
         towerRadiusLayer = LayerMask.NameToLayer("TowerRadius");
         cursorInstance = Instantiate(towerPrefab, Vector3.zero, Quaternion.identity);
         cursorObject = cursorInstance.transform;

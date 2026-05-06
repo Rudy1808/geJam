@@ -51,12 +51,12 @@ public class Enemy : MonoBehaviour
         //Wodotryski
         Cave.Money += moneyReward;
         transform.parent.GetComponent<ObjectPooling>().DespawnObject(gameObject);
-        Debug.Log("die");
+        //Debug.Log("die");
 
     }
     public void Despawn()
     {
         transform.parent.GetComponent<ObjectPooling>().DespawnObject(gameObject);
-        Debug.Log("despawn");
+       // Debug.Log("despawn");
     }
 }

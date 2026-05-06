@@ -45,7 +45,7 @@ public class TowerAttack : MonoBehaviour
 
     void Shoot(Transform target)
     {
-        Debug.Log("Strza³");
+       // Debug.Log("Strza³");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
