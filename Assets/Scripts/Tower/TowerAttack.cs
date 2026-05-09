@@ -50,7 +50,6 @@ public class TowerAttack : MonoBehaviour
     {
         if (targetList.Count == 0) return;
         Rotate();
-        Debug.Log("cast");
         Shoot(targetList.Peek());
     }
     void Rotate()
@@ -66,7 +65,6 @@ public class TowerAttack : MonoBehaviour
     void Shoot(Transform target)
     {
         spell.Cast(new Vector2(transform.position.x,transform.position.y),target);
-        Debug.Log("cast");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

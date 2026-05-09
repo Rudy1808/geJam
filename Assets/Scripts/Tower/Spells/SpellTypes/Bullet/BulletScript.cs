@@ -25,6 +25,7 @@ public class BulletScript : MonoBehaviour
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
+            Debug.Log("kolizja");
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             EffectHandler effectHandler = collision.gameObject.GetComponent<EffectHandler>();
 
