@@ -3,7 +3,7 @@ using UnityEngine;
 public class PathFollowing : MonoBehaviour
 {
     [HideInInspector] public Path path;
-    [HideInInspector] public float speed;
+    Enemy enemy;
     public int i = 0;
     void Start()
     {
@@ -20,7 +20,7 @@ public class PathFollowing : MonoBehaviour
         }
         if (path.wayPoints.Length == 0) return;
         Transform target = path.wayPoints[i];
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, target.position, enemy.speed * Time.deltaTime);
         if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
             i++;
@@ -28,7 +28,7 @@ public class PathFollowing : MonoBehaviour
     }
     private void OnEnable()
     {
-        speed = GetComponent<Enemy>().speed;
+        enemy = GetComponent<Enemy>();
     }
     private void OnDisable()
     {

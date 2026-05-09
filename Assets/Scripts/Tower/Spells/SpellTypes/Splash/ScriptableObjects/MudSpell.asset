@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: MudSpell
   m_EditorClassIdentifier: Assembly-CSharp::SplashSpellSO
   damage: 5
-  sprite: {fileID: -2292035274516833483, guid: 952760d0df6bafc46975731948d1f01d, type: 3}
+  sprite: {fileID: -2292035274516833483, guid: fec685555367c5a42ac17da1d8d5153c, type: 3}
   effects:
-  - {fileID: 11400000, guid: 16e9bc5e4ee4fbe43a36702ad806164c, type: 2}
+  - {fileID: 11400000, guid: d596274919d3da64c815cac06b423c67, type: 2}
+  isDurable: 0
   duration: 10
-  prefab: {fileID: 9031302754496192408, guid: f79e57fe132978f44b0385e7bb9ed360, type: 3}
+  coliderSize: {x: 4, y: 4}
+  prefab: {fileID: 9031302754496192408, guid: 7ca87e291a493c94f9a8cb7f9d47a0f0, type: 3}

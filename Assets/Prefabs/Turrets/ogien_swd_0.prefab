@@ -343,7 +343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerAttack
   damage: 0
   range: 8
-  fireRate: 0
+  cooldown: 1
+  spell: {fileID: 11400000, guid: a8908dfee5e5df542b68ece4610273e0, type: 2}
 --- !u!58 &5430650925708775670
 CircleCollider2D:
   m_ObjectHideFlags: 0

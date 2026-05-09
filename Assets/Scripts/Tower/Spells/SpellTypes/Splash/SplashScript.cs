@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SplashScript : MonoBehaviour
 {
+    [HideInInspector]
     public SplashSpellSO SO;
     BoxCollider2D col;
     SpriteRenderer spriteRenderer;
@@ -27,7 +28,7 @@ public class SplashScript : MonoBehaviour
 
     private void Die()
     {
-        Destroy(this);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +42,7 @@ public class SplashScript : MonoBehaviour
             if (effectHandler == null) return; 
 
             enemy.TakeDamage(SO.damage);
+            
 
             foreach (var i in SO.effects)
             {
@@ -48,7 +50,4 @@ public class SplashScript : MonoBehaviour
             }
         }
     }
-
-
-
 }

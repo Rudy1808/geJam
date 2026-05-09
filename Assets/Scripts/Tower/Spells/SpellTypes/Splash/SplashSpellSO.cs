@@ -8,7 +8,7 @@ public class SplashSpellSO : SpellSO
     public int duration;
     public Vector2 coliderSize;
     public GameObject prefab;
-public override void Cast(Vector2 postion)
+public override void Cast(Vector2 postion, Transform transform=null)
     {
         GameObject spellObject = Instantiate(prefab,new Vector3(postion.x,postion.y,0),Quaternion.identity);
         SplashScript script = spellObject.GetComponent<SplashScript>();

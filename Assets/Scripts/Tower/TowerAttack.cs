@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -7,30 +8,49 @@ public class TowerAttack : MonoBehaviour
 {
     public int damage;
     public float range = 6f;
-    public float fireRate;
+    //public float fireRate;
 
     bool isFacingRight;
+    [SerializeField] float cooldown;
+    float timer;
 
     CircleCollider2D col;
+    [SerializeField] BulletSpellSO spell;
+
+    
 
     public PriorityQueue<Transform> targetList = new PriorityQueue<Transform>();
 
     private void Update()
     {
-        Atack();
-        //Debug.Log(targetList.Count);
+        if(targetList.Count > 0)
+        {
+            if (timer >= cooldown)
+            {
+                timer = 0;
+                Atack();
+            }
+        }
+        timer += Time.deltaTime;
     }
     private void Awake()
     {
         col = GetComponent<CircleCollider2D>();
         col.isTrigger = true;
         col.radius = range;
+
+        timer = cooldown;
+
+    }
+    private void Start()
+    {
     }
 
     void Atack()
     {
         if (targetList.Count == 0) return;
         Rotate();
+        Debug.Log("cast");
         Shoot(targetList.Peek());
     }
     void Rotate()
@@ -45,7 +65,8 @@ public class TowerAttack : MonoBehaviour
 
     void Shoot(Transform target)
     {
-       // Debug.Log("Strza³");
+        spell.Cast(new Vector2(transform.position.x,transform.position.y),target);
+        Debug.Log("cast");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

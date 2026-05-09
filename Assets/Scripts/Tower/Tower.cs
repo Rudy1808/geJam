@@ -19,9 +19,5 @@ public class Tower : MonoBehaviour
 
     private void ApplyLevel()
     {
-        //Tower Atack
-        GetComponent<TowerAttack>().damage = CurrentData.damage;
-        GetComponent<TowerAttack>().range = CurrentData.range;
-        GetComponent<TowerAttack>().fireRate = CurrentData.fireRate;
     }
 }

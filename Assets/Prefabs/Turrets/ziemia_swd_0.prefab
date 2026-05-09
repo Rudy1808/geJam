@@ -125,6 +125,7 @@ MonoBehaviour:
   damage: 0
   range: 11
   fireRate: 0
+  spell: {fileID: 11400000, guid: cc10b41482bd474458bf42549c747608, type: 2}
 --- !u!58 &2228489249167802918
 CircleCollider2D:
   m_ObjectHideFlags: 0
