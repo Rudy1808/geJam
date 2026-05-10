@@ -1,48 +1,51 @@
-using UnityEditor.Build;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
     [HideInInspector] public BulletSpellSO SO;
-    CircleCollider2D Col;
+    [HideInInspector] public Transform target;
+    [HideInInspector] public ObjectPooling pool;
+
+    CircleCollider2D col;
     SpriteRenderer spriteRenderer;
+
     public void OnCast()
     {
-        Col = GetComponent<CircleCollider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (col == null) col = GetComponent<CircleCollider2D>();
+        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
 
-        Col.radius = SO.bulletRadius;
+        col.radius = SO.bulletRadius;
         spriteRenderer.sprite = SO.sprite;
     }
+
     private void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(
-        transform.position,
-        SO.target.position,
-        SO.speed);
-    }
-    private void OnTriggerEnter(Collider collision)
-    {
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (target == null)
         {
-            Debug.Log("kolizja");
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            EffectHandler effectHandler = collision.gameObject.GetComponent<EffectHandler>();
-
-            if (enemy == null) return;
-            if (effectHandler == null) return;
-
-            enemy.TakeDamage(SO.damage);
-
-
-            foreach (var i in SO.effects)
-            {
-                effectHandler.AddEffect(i);
-            }
-
-            Destroy(this);
+            pool.DespawnObject(gameObject);
+            return;
         }
+
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            target.position,
+            SO.speed * Time.fixedDeltaTime);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer != LayerMask.NameToLayer("Enemy")) return;
 
+        Enemy enemy = collision.GetComponent<Enemy>();
+        EffectHandler effectHandler = collision.GetComponent<EffectHandler>();
+
+        if (enemy == null || effectHandler == null) return;
+
+        enemy.TakeDamage(SO.damage);
+
+        foreach (var effect in SO.effects)
+            effectHandler.AddEffect(effect);
+
+        pool.DespawnObject(gameObject);
+    }
 }

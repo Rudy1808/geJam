@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   waves:
   - microWaves:
-    - enemyType: 12
+    - enemyType: 0
       amount: 20
       delay: 1
     - enemyType: 11

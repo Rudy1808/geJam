@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour
     [Header("Base Stats")]
     public int maxHp;
     private int _hp;
-    public int hp
+    public int Hp
     {
         get
         {
@@ -13,13 +13,11 @@ public class Enemy : MonoBehaviour
  
         set
         {
-            _hp = Mathf.Clamp(0, _hp, maxHp);
-
+            _hp = Mathf.Clamp(value, 0, maxHp);
             if(_hp == 0)
             {
                 Die();
             }
-            value = _hp;
         }
     }
     
@@ -43,7 +41,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        hp-=damage;
+        Hp-=damage;
     }
 
     void Die()

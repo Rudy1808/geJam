@@ -15,7 +15,6 @@ MonoBehaviour:
   damage: 50
   sprite: {fileID: -4712206219381415745, guid: 3ac74fbecc449e548a28371dfece03c3, type: 3}
   effects: []
-  prefab: {fileID: 5098420986681579053, guid: 5de0efac9a47bb645b7a54cd922b881d, type: 3}
-  target: {fileID: 0}
+  pool: {fileID: 0}
   speed: 5
   bulletRadius: 2

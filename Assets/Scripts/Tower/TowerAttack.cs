@@ -1,86 +1,76 @@
-using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class TowerAttack : MonoBehaviour
 {
-    public int damage;
     public float range = 6f;
-    //public float fireRate;
-
-    bool isFacingRight;
     [SerializeField] float cooldown;
-    float timer;
-
-    CircleCollider2D col;
     [SerializeField] BulletSpellSO spell;
 
-    
+    float timer;
+    bool isFacingRight;
+    CircleCollider2D col;
 
-    public PriorityQueue<Transform> targetList = new PriorityQueue<Transform>();
+    public List<Transform> targetList = new();
 
-    private void Update()
-    {
-        if(targetList.Count > 0)
-        {
-            if (timer >= cooldown)
-            {
-                timer = 0;
-                Atack();
-            }
-        }
-        timer += Time.deltaTime;
-    }
     private void Awake()
     {
         col = GetComponent<CircleCollider2D>();
         col.isTrigger = true;
         col.radius = range;
-
         timer = cooldown;
 
-    }
-    private void Start()
-    {
+        spell.pool = GetComponent<ObjectPooling>();
     }
 
-    void Atack()
+    private void Update()
     {
-        if (targetList.Count == 0) return;
-        Rotate();
-        Shoot(targetList.Peek());
+        if (timer < cooldown)
+        {
+            timer += Time.deltaTime;
+            return;
+        }
+
+        Transform target = GetTarget();
+        if (target == null) return;
+
+        timer = 0;
+        Rotate(target);
+        spell.Cast(transform.position, target);
     }
-    void Rotate()
+
+    Transform GetTarget()
     {
-        float distance = targetList.Peek().position.x - transform.position.x;
+        targetList.RemoveAll(x => x == null);
+        if (targetList.Count == 0) return null;
+
+        targetList.Sort((a, b) => a.position.x.CompareTo(b.position.x));
+        return targetList[0];
+    }
+
+    void Rotate(Transform target)
+    {
+        float distance = target.position.x - transform.position.x;
+
         if ((isFacingRight && distance < 0) || (!isFacingRight && distance > 0))
         {
             isFacingRight = !isFacingRight;
-            transform.localScale = new Vector3(transform.localScale.x*-1, transform.localScale.y, transform.localScale.z);
+            Vector3 s = transform.localScale;
+            transform.localScale = new Vector3(s.x * -1, s.y, s.z);
         }
-    }
-
-    void Shoot(Transform target)
-    {
-        spell.Cast(new Vector2(transform.position.x,transform.position.y),target);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-        {
-            targetList.Enqueue(collision.transform, 1000 - collision.transform.position.x);
-        }
+        if (collision.gameObject.layer != LayerMask.NameToLayer("Enemy")) return;
+        if (!targetList.Contains(collision.transform))
+            targetList.Add(collision.transform);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-        {
-            targetList.Dequeue();
-        }
+        if (collision.gameObject.layer != LayerMask.NameToLayer("Enemy")) return;
+        targetList.Remove(collision.transform);
     }
 
     private void OnDrawGizmos()
@@ -89,4 +79,3 @@ public class TowerAttack : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 }
-
