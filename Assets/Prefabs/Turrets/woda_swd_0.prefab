@@ -118,7 +118,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352391107312528250}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9cd264fa6f072f419de35b1493dabab, type: 3}
   m_Name: 
@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 5333083246921947974}
   - component: {fileID: 6711897835873537429}
   - component: {fileID: 2196791643695656574}
+  - component: {fileID: 1308560664089459867}
   m_Layer: 7
   m_Name: towerRadius
   m_TagString: Untagged
@@ -396,3 +397,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &1308560664089459867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5098688088316533278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33add4afba92b22448265f92c4214bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerRadiusClick

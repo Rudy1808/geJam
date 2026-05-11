@@ -1,17 +1,29 @@
+using System;
 using UnityEngine;
 
 public class Cave : MonoBehaviour
 {
-    public int hp;
     public static int _money = 100;
-    public static int Money {
-        get
-        {
-            return _money;
-        }
-        set 
+    public static event Action<int> OnMoneyChanged;
+    public static int Money
+    {
+        get => _money;
+        set
         {
             _money = value;
+            OnMoneyChanged?.Invoke(value);
+            //StatsController.SetMoney(value);
+        }
+    }
+    public static int _hp = 100;
+    public static event Action<int> OnHPChanged;
+    public static int HP
+    {
+        get => _hp;
+        set
+        {
+            _hp = value;
+            OnHPChanged?.Invoke(value);
             //StatsController.SetMoney(value);
         }
     }
@@ -25,9 +37,9 @@ public class Cave : MonoBehaviour
             Enemy enemy = collision.GetComponent<Enemy>();
             if (enemy != null)
             {
-                hp -= enemy.attack;
+                HP -= enemy.attack;
+                enemy.Despawn();
             }
-            enemy.Despawn();
         }
     }
 }

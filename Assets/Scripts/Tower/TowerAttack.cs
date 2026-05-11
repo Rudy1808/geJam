@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TowerAttack : MonoBehaviour
 {
-    public float range = 6f;
+    public float range;
     [SerializeField] float cooldown;
     [SerializeField] BulletSpellSO spell;
 
