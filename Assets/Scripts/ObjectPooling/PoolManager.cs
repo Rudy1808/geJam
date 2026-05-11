@@ -28,11 +28,12 @@ public class PoolManager : MonoBehaviour
     {
         get
         {
+            int count = 0;
             foreach (Transform transform in enemyPoolDict.Values) {
                 ObjectPooling pool = transform.GetComponent<ObjectPooling>();
-                return pool.enemyCount;
+                count += pool.enemyCount;
             }
-
+            _allEnemyCount = count;
             return _allEnemyCount;
         }
         private set
@@ -69,6 +70,11 @@ public class PoolManager : MonoBehaviour
             newPool.AddComponent<ObjectPooling>().prefab = enemyPrefabDict[type];
             newPool.SetActive(true);
         }
+    }
+
+    private void Update()
+    {
+        Debug.Log(AllEnemyCount);
     }
 
     public static void Spawn(EnemyType type, Vector3 spawnPosition, Path path)
