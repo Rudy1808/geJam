@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EarthBall
   m_EditorClassIdentifier: Assembly-CSharp::BulletSpellSO
   damage: 5
-  sprite: {fileID: -4228596931931613380, guid: fc60cab5e8999164797c3f2f1ad377ac, type: 3}
+  sprite: {fileID: -4214705796374008832, guid: 452fda55af0d3cd418b8e1ed9a6d1991, type: 3}
   effects: []
   speed: 15
   bulletRadius: 0.5

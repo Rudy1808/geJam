@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WindBall
   m_EditorClassIdentifier: Assembly-CSharp::BulletSpellSO
   damage: 5
-  sprite: {fileID: -7461791126250044183, guid: 864568010caf09d4d8ee3f82b3aeeaab, type: 3}
+  sprite: {fileID: -1399109967108413336, guid: 485378c88a5efea49ba587a13c27b48d, type: 3}
   effects: []
   speed: 15
   bulletRadius: 0.5
