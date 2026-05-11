@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PoisonEffect", menuName = "Scriptable Objects/PoisonEffect")]
+[CreateAssetMenu(fileName = "PoisonEffect", menuName = "Scriptable Objects/Effects/PoisonEffect")]
 public class PoisonEffect : ScriptableObject
 {
     

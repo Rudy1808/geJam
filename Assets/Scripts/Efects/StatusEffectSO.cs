@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "StatusEfectSO", menuName = "Scriptable Objects/StatusEfectSO")]
 public abstract class StatusEffectSO : ScriptableObject
 {
     public string effectName;

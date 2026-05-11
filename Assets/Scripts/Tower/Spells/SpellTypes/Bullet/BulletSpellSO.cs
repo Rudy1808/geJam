@@ -4,7 +4,7 @@ using UnityEngine;
 public class BulletSpellSO : SpellSO
 {
     public int speed;
-    public int bulletRadius;
+    public float bulletRadius;
     [HideInInspector] public ObjectPooling pool;
 
     public override void Cast(Vector2 position, Transform target)

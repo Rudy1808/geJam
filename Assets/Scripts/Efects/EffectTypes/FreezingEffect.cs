@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "FreezingEffect", menuName = "Scriptable Objects/FreezingEffect")]
+[CreateAssetMenu(fileName = "FreezingEffect", menuName = "Scriptable Objects/Effects/FreezingEffect")]
 public class FreezingEffect : StatusEffectSO
 {
     float speed;

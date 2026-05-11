@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5298712003169600676}
   - component: {fileID: 4043200942480231504}
   - component: {fileID: 2228489249167802918}
+  - component: {fileID: 8126154256388751002}
   m_Layer: 0
   m_Name: ziemia_swd_0
   m_TagString: Untagged
@@ -122,10 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9cd264fa6f072f419de35b1493dabab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerAttack
-  damage: 0
   range: 11
-  cooldown: 0
-  spell: {fileID: 0}
+  cooldown: 1
+  spell: {fileID: 11400000, guid: 0ed4c1d0c391adf4fbe0456d84a1ea3e, type: 2}
+  targetList: []
 --- !u!58 &2228489249167802918
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -162,6 +163,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2.56
+--- !u!114 &8126154256388751002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17373965827455726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53ad236475b46546835528f10e0d9aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPooling
+  prefab: {fileID: 5098420986681579053, guid: 5de0efac9a47bb645b7a54cd922b881d, type: 3}
+  enemyCount: 50
 --- !u!1 &1785704135233050008
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SlownessEffect", menuName = "Scriptable Objects/SlownessEffect")]
+[CreateAssetMenu(fileName = "SlownessEffect", menuName = "Scriptable Objects/Effects/SlownessEffect")]
 public class SlownessEffect : StatusEffectSO
 {
     [Range(0f, 1f)] public float slowPercent;
