@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2284e86872bc8243a248b34464ebce7, type: 3}
   m_Name: EarthBall
   m_EditorClassIdentifier: Assembly-CSharp::BulletSpellSO
-  damage: 5
+  damage: 25
   sprite: {fileID: -4214705796374008832, guid: 452fda55af0d3cd418b8e1ed9a6d1991, type: 3}
   effects: []
   speed: 15

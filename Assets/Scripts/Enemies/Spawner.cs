@@ -14,6 +14,7 @@ public struct MicroWave
 public class Wave
 {
     public List<MicroWave> microWaves;
+    public Path path;
 }
 
 public class Spawner : MonoBehaviour
@@ -21,7 +22,6 @@ public class Spawner : MonoBehaviour
     public List<Wave> waves = new List<Wave>();
     public float delayBetweenWave;
     public float delayIncrease;
-    public Path path;
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
                 for (int k = 0; k < waves[i].microWaves[j].amount; k++)
                 {
                     yield return new WaitForSeconds(waves[i].microWaves[j].delay);
-                    PoolManager.Spawn(waves[i].microWaves[j].enemyType, transform.position, path);
+                    PoolManager.Spawn(waves[i].microWaves[j].enemyType, transform.position, waves[i].path);
                     //Debug.Log("spawn");
                 }
             }

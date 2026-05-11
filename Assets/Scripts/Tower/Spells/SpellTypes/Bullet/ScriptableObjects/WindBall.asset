@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2284e86872bc8243a248b34464ebce7, type: 3}
   m_Name: WindBall
   m_EditorClassIdentifier: Assembly-CSharp::BulletSpellSO
-  damage: 5
+  damage: 10
   sprite: {fileID: -1399109967108413336, guid: 485378c88a5efea49ba587a13c27b48d, type: 3}
   effects: []
   speed: 15
