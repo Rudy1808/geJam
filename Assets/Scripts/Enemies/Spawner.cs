@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -23,10 +24,30 @@ public class Spawner : MonoBehaviour
     public float delayIncrease;
     public Path path;
 
+    private bool end = false;
+    public Sprite WinScreen;
+    public Sprite LoseScreen;
+    public GameObject UI;
+
     void Start()
     {
         StartCoroutine(SpawnerRutine());
     }
+
+    private void Update()
+    {
+        if (end && PoolManager.AllEnemyCount == 0)
+        {
+            GameObject.FindWithTag("End").GetComponent<SpriteRenderer>().sprite = WinScreen;
+            UI.SetActive(false);
+        }
+        else if (Cave.HP <= 0)
+        {
+            GameObject.FindWithTag("End").GetComponent<SpriteRenderer>().sprite = LoseScreen;
+            UI.SetActive(false);
+        }
+    }
+
     IEnumerator SpawnerRutine()
     {
         for (int i = 0; i < waves.Count; i++)
@@ -43,5 +64,6 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(delayBetweenWave);
             delayBetweenWave += delayIncrease;
         }
+        end = true;
     }
 }
