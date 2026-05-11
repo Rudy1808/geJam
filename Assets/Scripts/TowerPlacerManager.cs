@@ -4,7 +4,8 @@ public class TowerPlacerManager : MonoBehaviour
 {
     public static TowerPlacerManager Instance { get; private set; }
 
-    private TowerPlacer activePlacer;
+    public TowerPlacer activePlacer;
+    public bool IsPlacing => activePlacer != null;
 
     void Awake()
     {

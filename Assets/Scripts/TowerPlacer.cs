@@ -90,6 +90,11 @@ public class TowerPlacer : MonoBehaviour
             GameObject placed = Instantiate(towerPrefab, mouseWorld, Quaternion.identity);
             placed.GetComponent<TowerPreview>()?.ShowAsPlaced();
             placed.GetComponent<TowerAttack>().enabled = true;
+            TowerPreview placedPreview = placed.AddComponent<TowerPreview>();
+            float attackRange = towerPrefab.GetComponent<TowerAttack>().range * 2;
+            placedPreview.Initialize(attackRange);
+            placedPreview.ShowAsPlaced();
+            placed.AddComponent<TowerRadiusDisplay>();
             // jeœli prefab nie ma TowerPreview, ukryj rêcznie:
             HidePlacedRadii(placed);
 
