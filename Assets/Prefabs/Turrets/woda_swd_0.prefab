@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
   levels: []
-  cost: 65
+  cost: 60
 --- !u!114 &3890614415919016139
 MonoBehaviour:
   m_ObjectHideFlags: 0

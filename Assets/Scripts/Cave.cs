@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Cave : MonoBehaviour
 {
-    public static int _money = 100;
+    public static int _money = 150;
     public static event Action<int> OnMoneyChanged;
     public static int Money
     {
@@ -15,7 +15,7 @@ public class Cave : MonoBehaviour
             //StatsController.SetMoney(value);
         }
     }
-    public static int _hp = 100;
+    public static int _hp = 50;
     public static event Action<int> OnHPChanged;
     public static int HP
     {

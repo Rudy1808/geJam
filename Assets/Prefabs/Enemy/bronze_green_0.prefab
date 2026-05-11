@@ -110,7 +110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmoothPath
   path: {fileID: 0}
-  speed: 0
   i: 0
 --- !u!114 &-2808921674956313026
 MonoBehaviour:
@@ -126,8 +125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   maxHp: 20
   attack: 1
-  speed: 3.75
-  moneyReward: 5
+  speed: 1.875
+  moneyReward: 3
   enemyType: 2
   animationMove: {fileID: 0}
   fireArmor: 15
