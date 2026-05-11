@@ -395,4 +395,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPooling
   prefab: {fileID: 5098420986681579053, guid: 5de0efac9a47bb645b7a54cd922b881d, type: 3}
-  enemyCount: 50
+  enemyCount: 10

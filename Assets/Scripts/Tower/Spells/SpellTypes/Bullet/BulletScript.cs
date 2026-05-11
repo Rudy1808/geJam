@@ -9,6 +9,12 @@ public class BulletScript : MonoBehaviour
     CircleCollider2D col;
     SpriteRenderer spriteRenderer;
 
+    private Rigidbody2D rb;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     public void OnCast()
     {
         if (col == null) col = GetComponent<CircleCollider2D>();
@@ -30,6 +36,14 @@ public class BulletScript : MonoBehaviour
             transform.position,
             target.position,
             SO.speed * Time.fixedDeltaTime);
+
+
+        if(target.position == transform.position)
+        {
+            pool.DespawnObject(gameObject);
+        }
+        
+    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

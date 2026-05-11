@@ -45,7 +45,7 @@ public class TowerAttack : MonoBehaviour
         if (targetList.Count == 0) return null;
 
         targetList.Sort((a, b) => a.position.x.CompareTo(b.position.x));
-        return targetList[0];
+        return targetList[targetList.Count-1];
     }
 
     void Rotate(Transform target)
