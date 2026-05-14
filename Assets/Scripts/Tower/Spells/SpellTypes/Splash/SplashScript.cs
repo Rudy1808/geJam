@@ -6,6 +6,7 @@ public class SplashScript : MonoBehaviour
     public SplashSpellSO SO;
     BoxCollider2D col;
     SpriteRenderer spriteRenderer;
+    [HideInInspector] public ObjectPooling pool;
     float timer = 0;
 
     public void OnCast()
