@@ -103,12 +103,12 @@ TextureImporter:
       name: prowiatr_swg_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 32
-        width: 484
-        height: 472
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2ffd92d468a4a2d458eb5b70903c6fd6
     internalID: 0
     vertices: []
     indices: 

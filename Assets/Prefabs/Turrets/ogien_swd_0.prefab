@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 437711439866290537}
   - component: {fileID: 5430650925708775670}
   - component: {fileID: -8314584385715482501}
+  - component: {fileID: 5321449749679295707}
   m_Layer: 0
   m_Name: ogien_swd_0
   m_TagString: Untagged
@@ -409,3 +410,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPooling
   prefab: {fileID: 5098420986681579053, guid: 5de0efac9a47bb645b7a54cd922b881d, type: 3}
   enemyCount: 10
+--- !u!95 &5321449749679295707
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691553187945021380}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

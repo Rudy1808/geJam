@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4043200942480231504}
   - component: {fileID: 2228489249167802918}
   - component: {fileID: 8126154256388751002}
+  - component: {fileID: 1325980061659027483}
   m_Layer: 0
   m_Name: ziemia_swd_0
   m_TagString: Untagged
@@ -177,6 +178,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPooling
   prefab: {fileID: 5098420986681579053, guid: 5de0efac9a47bb645b7a54cd922b881d, type: 3}
   enemyCount: 10
+--- !u!95 &1325980061659027483
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17373965827455726}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8e0f339d6c8b07b40805859e2640065e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1785704135233050008
 GameObject:
   m_ObjectHideFlags: 0
